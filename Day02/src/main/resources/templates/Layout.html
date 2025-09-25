@@ -1,0 +1,57 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head th:fragment="head(title)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${title}">Devmaster Academy</title>
+  <!-- Bootstrap -->
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+  <style>
+    body { background: #fff; }
+    header nav a {
+      margin: 0 10px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #333;
+    }
+    header nav a:hover { color: #d9534f; }
+    footer { background: #f9cfcf; font-size: 14px; }
+    footer .nav a { color: #333; margin-right: 10px; text-decoration: none; }
+    footer .nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header th:fragment="header" class="container d-flex align-items-center py-2">
+  <a th:href="@{/}">
+    <img src="https://devmaster.edu.vn/images/logo.png" alt="DEV" style="height:60px;">
+  </a>
+  <nav class="ms-3">
+    <a th:href="@{/home}">Trang chủ</a>
+    <a th:href="@{/about}">Giới thiệu</a>
+
+    <a th:href="@{/contact}">Liên hệ</a>
+
+  </nav>
+</header>
+
+<!-- Footer -->
+<footer th:fragment="footer" class="py-3 mt-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <img src="https://devmaster.edu.vn/images/logo.png" alt="DEV" style="width:30px" class="me-2">
+      <span>© 2024 <b>Devmaster Academy</b></span>
+    </div>
+    <ul class="nav">
+      <li class="nav-item"><a th:href="@{/home}" class="nav-link p-0">Trang chủ</a></li>
+      <li class="nav-item"><a th:href="@{/services}" class="nav-link p-0">Dịch vụ</a></li>
+      <li class="nav-item"><a th:href="@{/contact}" class="nav-link p-0">Liên hệ</a></li>
+
+    </ul>
+  </div>
+</footer>
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
